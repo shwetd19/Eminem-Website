@@ -5,6 +5,13 @@ $(document).ready(function(){
 		$('.navigation').toggleClass('active');
 	});
 	
+	// Close mobile menu when a nav link is clicked
+	$('.navigation a').on('click', function() {
+		if ($(window).width() <= 768) {
+			$('.navigation').removeClass('active');
+		}
+	});
+	
 	// Hide additional album info initially
 	$(".additionalAlbumInfo").hide();
 
@@ -120,6 +127,13 @@ $(document).ready(function(){
 			$('.back-to-top').fadeIn();
 		} else {
 			$('.back-to-top').fadeOut();
+		}
+	});
+	
+	// Check if navigation menu should be visible on resize
+	$(window).resize(function() {
+		if ($(window).width() > 768) {
+			$('.navigation').removeClass('active');
 		}
 	});
 });

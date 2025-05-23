@@ -119,6 +119,12 @@ body {
 	font-size: 24px;
 	cursor: pointer;
 	padding: 10px;
+	transition: all 0.3s ease;
+	z-index: 1000;
+}
+
+.menu-toggle:hover {
+	color: var(--accent-color);
 }
 
 /* Main content */
@@ -534,11 +540,19 @@ h4 {
 		max-height: 0;
 		overflow: hidden;
 		transition: max-height 0.5s ease;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-color: var(--secondary-bg);
+		z-index: 99;
+		box-shadow: 0 2px 10px var(--shadow-color);
 	}
 	
 	.navigation.active {
 		max-height: 300px;
 		padding: 10px 0;
+		padding-top: 50px;
 	}
 	
 	.menu-toggle {
@@ -547,6 +561,13 @@ h4 {
 		top: 10px;
 		right: 10px;
 		z-index: 101;
+	}
+	
+	#bottom .navigation {
+		position: relative;
+		max-height: none;
+		margin-top: 20px;
+		padding: 10px 0;
 	}
 	
 	#aboutSection {
