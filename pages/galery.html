@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="description" content="Eminem Gallery"/>
+		<meta name="keywords" content="Gallery, Eminem"/>
+		<meta name="author" content="Dejan Bogatinovski, bogatinovski.dejan@gmail.com"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>Eminem - Gallery</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../style.css">
+		<link rel="icon" type="image/x-icon" href="../favicon.ico">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="../script.js"></script>
+		<script type="text/javascript" src="../scriptGalery.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="top">
+				<button class="menu-toggle" aria-label="Toggle navigation menu">
+					<i class="fas fa-bars"></i>
+				</button>
+				<img id="banner" src="../logo.jpg" alt="Eminem Banner">
+				<nav class="navigation">
+					<a href="../index.html"><i class="fas fa-home"></i> Home</a>
+					<a href="personal.html"><i class="fas fa-user"></i> Personal life</a>
+					<a href="music.html"><i class="fas fa-headphones"></i> Music</a>
+					<a href="discography.html"><i class="fas fa-music"></i> Discography</a>
+					<a href="artistry.html"><i class="fas fa-paint-brush"></i> Artistry</a>
+					<a href="galery.html" class="selectedPage"><i class="fas fa-images"></i> Gallery</a>
+				</nav>
+			</div>
+			
+			<div id="middle">
+				<div id="albumsCovers">
+					<header>Photo Albums</header>
+					<div class="albumCover" data-path="../galery/Personal/" data-count="20">
+						<img class="thumbnail" src="../thumbnails/personal.jpg" alt="Personal Gallery">
+						<h4>Personal Gallery</h4>
+					</div>
+					<div class="albumCover" data-path="../galery/Performance/" data-count="14">
+						<img class="thumbnail" src="../thumbnails/performance.jpg" alt="Performance">
+						<h4>Performance</h4>
+					</div>
+					<div class="albumCover" data-path="../galery/Quotes/" data-count="13">
+						<img class="thumbnail" src="../thumbnails/quotes.jpg" alt="Quotes">
+						<h4>Quotes</h4>
+					</div>
+				</div>
+				
+				<div id="albumsPhotos">
+					<div id="mainFrameContainer">
+						<button id="closeFullscreen" aria-label="Close fullscreen view">
+							<i class="fas fa-times"></i>
+						</button>
+						<img id="mainFrame" src="" alt="Selected image">
+						<div id="gui">
+							<button id="left" class="changePicture" aria-label="Previous image">
+								<i class="fas fa-chevron-left"></i>
+							</button>
+							<div id="counter">1/1</div>
+							<button id="right" class="changePicture" aria-label="Next image">
+								<i class="fas fa-chevron-right"></i>
+							</button>
+						</div>
+					</div>
+					<button id="showAllPictures">
+						<i class="fas fa-th"></i> Show all images from this gallery
+					</button>
+				</div>
+				
+				<div class="social-links">
+					<a href="https://www.instagram.com/eminem/" target="_blank" aria-label="Follow Eminem on Instagram">
+						<i class="fab fa-instagram"></i>
+					</a>
+					<a href="https://twitter.com/eminem" target="_blank" aria-label="Follow Eminem on Twitter">
+						<i class="fab fa-twitter"></i>
+					</a>
+					<a href="https://www.youtube.com/user/EminemMusic" target="_blank" aria-label="Subscribe to Eminem on YouTube">
+						<i class="fab fa-youtube"></i>
+					</a>
+					<a href="https://open.spotify.com/artist/7dGJo4pcD2V6oG8kP0tJRR" target="_blank" aria-label="Listen to Eminem on Spotify">
+						<i class="fab fa-spotify"></i>
+					</a>
+				</div>
+			</div>
+
+			<div id="bottom">
+				<section id="aboutSection">
+					<div id="titles">
+						<span class="naslov">Author:</span> <br>
+						<span class="naslov">Email:</span> <br>
+						<span class="naslov">Created on:</span> <br>
+						<span class="naslov">Last edited on:</span> <br>
+					</div>
+					<div id="infos">
+						<span class="info">Dejan Bogatinovski</span> <br>
+						<a href="mailto:bogatinovski.dejan@students.finki.ukim.mk">
+							<span class="info" id="email">bogatinovski.dejan@students.finki.ukim.mk</span></a> <br>
+						<span class="info">06.01.2014</span> <br>
+						<span class="info">15.01.2014</span> <br>
+					</div>
+				</section>
+				<nav class="navigation">
+					<a href="../index.html"><i class="fas fa-home"></i> Home</a>
+					<a href="personal.html"><i class="fas fa-user"></i> Personal life</a>
+					<a href="music.html"><i class="fas fa-headphones"></i> Music</a>
+					<a href="discography.html"><i class="fas fa-music"></i> Discography</a>
+					<a href="artistry.html"><i class="fas fa-paint-brush"></i> Artistry</a>
+					<a href="galery.html" class="selectedPage"><i class="fas fa-images"></i> Gallery</a>
+				</nav>
+				<div class="copyright">
+					<p>&copy; 2023 Eminem Fan Website. All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+		<a href="#" class="back-to-top" aria-label="Back to top">
+			<i class="fas fa-chevron-up"></i>
+		</a>
+		<script>
+			// Mobile menu toggle
+			document.querySelector('.menu-toggle').addEventListener('click', function() {
+				document.querySelector('.navigation').classList.toggle('active');
+			});
+		</script>
+	</body>
+</html>
